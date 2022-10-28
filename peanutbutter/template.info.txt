@@ -4,4 +4,4 @@ email    lenehey@gmail.com
 date     2022/10/28
 name     Peanutbutter Template
 desc     Modified Monochrome template to look a little more like Vector2022
-url      https://www.vormweg.online/dokuwiki:monochrome
+url      https://github.com/lenehey/dw_tpl_peanutbutter
