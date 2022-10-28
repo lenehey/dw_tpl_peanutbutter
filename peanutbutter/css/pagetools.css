@@ -1,0 +1,81 @@
+/**
+ * This file provides the styles for the page tools
+ * (fly out navigation beside the page to edit, etc).
+ *
+ * @author Anika Henke <anika@selfthinker.org>
+ * @author Andreas Gohr <andi@splitbrain.org>
+ * @author Klaus Vormweg <klaus.vormweg@gmx.de>
+ */
+
+#dokuwiki__site > .site {
+    /* give space to the right so the tools won't disappear on smaller screens */
+    padding-right: 50px;
+    /* give the same space to the left to balance it out */
+    padding-left: 10px;
+}
+.dokuwiki div.page {
+    height: 12px;
+    min-height: 190px; /* 30 (= height of icons) x 6 (= maximum number of possible tools) + 2x5 */
+    height: auto;
+}
+
+#dokuwiki__pagetools ul {
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+[dir=rtl] #dokuwiki__pagetools ul {
+    right: auto;
+    left: 0;
+    text-align: left;
+}
+
+/*____________ page tools ____________*/
+
+#dokuwiki__pagetools {
+    padding-top: 5px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: __pagetools__;
+    background-color: __pt_background__;
+    width: 40px;
+    height: 100%;
+    z-index: 10;
+}
+#dokuwiki__pagetools hr {
+	margin: 5px 0px;
+}
+#dokuwiki__pagetools ul li {
+    padding: 0;
+    margin: 0 5px;
+    list-style: none;
+    font-size: 0.875em;
+    text-align: center;
+}
+
+#dokuwiki__pagetools ul li a {
+	display: block;
+	white-space: nowrap;
+	width: 30px;
+	height: 30px;
+	overflow: hidden;
+  padding: 3px 0 0 0;
+}
+
+#dokuwiki__pagetools ul li a span {
+    display: none;
+}
+#dokuwiki__pagetools ul li a svg path {
+    fill: __pt_foreground__;
+}
+
+#dokuwiki__pagetools ul li a:hover {
+    background-color: __pt_rollover__;
+}
+#dokuwiki__pagetools ul li a:hover svg path {
+    fill: __rollover__;
+}
+#dokuwiki__pagetools ul.pagetools, #dokuwiki__pagetools ul.sitetools {
+    margin-top: 30px;
+}

@@ -1,0 +1,100 @@
+/**
+ * This file provides style changes for small screens.
+ *
+ * @author Anika Henke <anika@selfthinker.org>
+ * @author Klaus Vormweg <klaus.vormweg@gmx.de>
+ */
+
+@media only screen and (max-width: 1023px) {
+  #dokuwiki__site > .site {
+  	padding-left: 10px;
+  }
+} /* media 1023px */
+
+@media only screen and (max-width: 799px) {
+  #dokuwiki__aside {
+    width: 100%;
+    float: none;
+    margin-bottom: 1.4em;
+    position: static;
+  }
+  .hasSidebar .wrapper {
+	  margin-left: 0;
+  }
+  #dokuwiki__aside > .pad {
+      margin: 0;
+  }
+  .hasSidebar #dokuwiki__content {
+      float: none;
+      margin-left: 0;
+      margin-right: 0;
+  }
+  .hasSidebar #dokuwiki__content > .pad {
+      margin-left: 0;
+  }
+  [dir=rtl] .hasSidebar #dokuwiki__content > .pad {
+      margin-right: 0;
+  }
+  #dokuwiki__header .headings {
+      margin: 0;
+  }
+  #dokuwiki__header .tools {
+      margin-bottom: .7em;
+  }
+  #dokuwiki__header .headings,
+  #dokuwiki__header .tools,
+  #dokuwiki__header .tools li {
+      float: none;
+      text-align: left;
+  }
+  [dir=rtl] #dokuwiki__header .tools,
+  [dir=rtl] #dokuwiki__header .tools li {
+      float: none;
+      text-align: right;
+  }
+  [dir=rtl] #dokuwiki__header .headings {
+      float: none;
+      text-align: right;
+  }
+  #dokuwiki__sitetools ul {
+      padding: 0;
+  }
+  #dokuwiki__sitetools li {
+      margin: 0 1.5em 0 0;
+  }
+  [dir=rtl] #dokuwiki__sitetools li {
+      margin: 0 0 0 1.5em;
+  }
+} /* media 799px */
+
+@media only screen and (max-width: 639px) {
+  #dokuwiki__site > .site {
+  	padding-left: 0;
+  	padding-right: 40px;
+  }
+  #dw__toc {
+    display: none;
+  }
+  #dokuwiki__site {
+  	padding: 0;
+  }
+  #dokuwiki__sitetools, #dokuwiki__footer {
+  	padding-left: 13px;
+  }
+  #dokuwiki__footer .user, #dokuwiki__footer .doc {
+  	float: none;
+  }
+  .dokuwiki fieldset {
+  	width: auto;
+	  max-width: 400px;
+  }
+} /* media 639px */
+
+@media only screen and (max-width: 479px) {
+  #dokuwiki__header h1 {
+  	padding-left: 0.7em;
+  }
+  #dokuwiki__header form.search input#qsearch__in {
+  	width: 8em;
+  }
+} /* media 479px */

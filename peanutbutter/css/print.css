@@ -1,0 +1,163 @@
+/**
+ * This file provides the styles for printing.
+ *
+ * @author Klaus Vormweg <klaus.vormweg@gmx.de>
+ */
+
+body {
+    font: normal 87.5%/1.3 Garamond, Baskerville, "Hoefler Text", "Nimbus Roman No9 L", serif;
+    background-color: __background__;
+    color: __text__;
+}
+
+/* hide certain sections */
+audio,
+video,
+#dokuwiki__header .tools,
+#dokuwiki__aside,
+.dokuwiki .breadcrumbs,
+.dokuwiki .toc,
+#dw__toc,
+#dokuwiki__pagetools,
+#dokuwiki__footer {
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+caption,
+legend {
+    clear: both;
+}
+
+ul {
+    list-style: disc outside;
+}
+ol {
+    list-style: decimal outside;
+}
+ol ol {
+    list-style-type: lower-alpha;
+}
+ol ol ol {
+    list-style-type: upper-roman;
+}
+ol ol ol ol {
+    list-style-type: upper-alpha;
+}
+ol ol ol ol ol {
+    list-style-type: lower-roman;
+}
+
+/* undo icons */
+a:link,
+a:visited {
+    text-decoration: none;
+    color: __existing__;
+    background-color: inherit;
+    background-image: none;
+    padding: 0;
+}
+
+/* display href after link */
+a.urlextern:after,
+a.interwiki:after,
+a.mail:after {
+   content: " [" attr(href) "]";
+   font-size: 90%;
+}
+
+/* code blocks */
+pre {
+    font-family: monospace;
+}
+dl.code dt,
+dl.file dt {
+    font-weight: bold;
+}
+
+/* images */
+img {
+    border-width: 0;
+    vertical-align: middle;
+}
+img.media {
+    margin: .2em 0;
+}
+img.medialeft {
+    margin: .2em 1.5em .2em 0;
+}
+img.mediaright {
+    margin: .2em 0 .2em 1.5em;
+}
+img.mediacenter {
+    margin: .2em auto;
+}
+
+mark {
+    font-weight: bold;
+}
+
+blockquote {
+    padding: 0 10pt;
+    margin: 0;
+    border: solid __border__;
+    border-width: 0 0 0 2pt;
+}
+[dir=rtl] blockquote {
+    border-width: 0 2pt 0 0;
+}
+abbr {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+/* tables */
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+    border-spacing: 0;
+    border: 1pt solid __border__;
+}
+th,
+td {
+    padding: 3pt 5pt;
+    margin: 0;
+    vertical-align: top;
+    border: 1pt solid __borderdark__;
+    text-align: left;
+}
+[dir=rtl] th,
+[dir=rtl] td {
+    text-align: right;
+}
+th {
+    font-weight: bold;
+}
+
+
+/*____________ a bit of layout ____________*/
+
+#dokuwiki__header {
+  border-bottom: 2pt solid __border__;
+}
+#dokuwiki__header .headings a {
+	display: block;
+	float: left;
+}
+#dokuwiki__header h1 {
+  float: right;
+  clear: none;
+  margin: 0;
+}
+#dokuwiki__header h1 a {
+  text-decoration: none;
+}
+.dokuwiki div.footnotes {
+  clear: both;
+  border-top: 1pt solid __borderdark__;
+  margin-top: 10pt;
+}
