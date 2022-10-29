@@ -180,6 +180,7 @@ table {
   empty-cells: show;
   border-spacing: 0;
   border: 1px solid __border__;
+  background-color:white;
 }
 caption {
   caption-side: top;
@@ -193,7 +194,6 @@ td {
   vertical-align: top;
   border: 1px solid __border__;
   text-align: left;
-  background-color:white;
 }
 th {
   font-weight: bold;
