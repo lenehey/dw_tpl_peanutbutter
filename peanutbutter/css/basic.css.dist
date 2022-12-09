@@ -8,129 +8,148 @@
  *
  * @author Anika Henke <anika@selfthinker.org>
  * @author Klaus Vormweg <klaus.vormweg@gmx.de>
+ * 
+ * Modified by L. Heyman 10/14/22
  */
 
  html {
   margin: 0;
   padding: 0;
   overflow-x: auto;
-  overflow-y: scroll;
-  font: normal 100%/1.35 Frutiger, Calibri, "Myriad Pro", Myriad, "Nimbus Sans L", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow-y: auto;
+  font: normal 87.5%/1.35 Frutiger, Calibri, "Myriad Pro", Myriad, "Nimbus Sans L", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* default font size: 100% => 16px; 93.75% => 15px; 87.5% => 14px; 81.25% => 13px; 75% => 12px */
   background-color: __background_alt__;
 }
 body {
   margin: 0 auto;
-  font-size: 93%;
+  font: normal 100%/1.4 sans-serif;
   color: __text__;
+  background-color:#f4efe1;
 }
 
 
-/*____________ headers ____________*/
-
+/* headlines */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
-  color: __text_neu__;
+  font-family: sans-serif, tebuchet; 
   background-color: inherit;
   padding: 0;
-  line-height: 1.2;
   clear: left; /* ideally 'both', but problems with toc */
 }
-[dir=rtl] h1,
-[dir=rtl] h2,
-[dir=rtl] h3,
-[dir=rtl] h4,
-[dir=rtl] h5,
-[dir=rtl] h6 {
-  clear: right;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0 0 0.6em;
-}
-h2 {
-  font-size: 1.75em;
-  margin: 0 0 0.7em;
-}
-h3 {
-  font-size: 1.5em;
-  margin: 0 0 0.8em;
-}
-h4 {
-  font-size: 1.25em;
-  margin: 0 0 0.9em;
-}
-h5 {
-  font-size: 1em;
-  margin: 0 0 1em;
-}
-h6 {
-  font-size: 1em;
-  margin: 0 0 1em;
-}
-/* bottom margin = 1 / font-size */
-
-caption,
-figcaption,
-summary,
-legend {
-  font-style: italic;
-  font-weight: normal;
-  line-height: 1.2;
-  padding: 0;
-  margin: 0 0 .35em;
-}
 
 
-/*____________ basic margins and paddings ____________*/
+div#content .dokuwiki h1,
+div#content .dokuwiki h2,
+div#content .dokuwiki h3,
+div#content .dokuwiki h4,
+div#content .dokuwiki h5,
+div#content .dokuwiki h6,
+{
+  border-bottom: 2px solid __text__;
+  color: __text__;
+  margin: 0;
+  padding-bottom: 0.2em;
+  padding-top: 0.5em;
+  margin-bottom: .3em;
+}
 
+div#content .dokuwiki h1 a,
+div#content .dokuwiki h2 a,
+div#content .dokuwiki h3 a,
+div#content .dokuwiki h4 a,
+div#content .dokuwiki h5 a,
+div#content .dokuwiki h6 a {
+  color: __text__;
+}
+div#content .dokuwiki h1 a:hover,
+div#content .dokuwiki h2 a:hover,
+div#content .dokuwiki h3 a:hover,
+div#content .dokuwiki h4 a:hover,
+div#content .dokuwiki h5 a:hover,
+div#content .dokuwiki h6 a:hover {
+  text-decoration: none;
+}
+div#content .dokuwiki h1, h1 {
+  font-size: 150%;
+}
+
+div#coontent .dokuwiki h2, h2 {
+font-size:135%;}
+
+div#content .dokuwiki h1,
+div#content .dokuwiki h2,
+h1, h2 {
+  border-bottom: 2px solid __text__;
+  color: __text__;
+  margin: 0;
+  padding-bottom: 0em;
+  padding-top: 0.5em;
+  margin-bottom: .3em;
+}
+div#content .dokuwiki h3,
+div#content .dokuwiki h4,
+div#content .dokuwiki h5,
+div#content .dokuwiki h6, h3, h4, h5 {
+  font-weight: bold;
+  border-bottom: none;
+  margin-bottom: 0.3em;
+}
+div#content .dokuwiki h3, h3 {
+  font-size: 125%;
+}
+div#content .dokuwiki h4, h4 {
+  font-size: 110%;
+}
+div#content .dokuwiki h5, h5 {
+  font-size: 100%;
+}
+div#content .dokuwiki h6, h6 {
+  font-size: 80%;
+}
+
+/* remove indent from different sections */
+div#content .dokuwiki div.level1,
+div#content .dokuwiki div.level2,
+div#content .dokuwiki div.level3,
+div#content .dokuwiki div.level4,
+div#content .dokuwiki div.level5 {
+  margin-left: 0;
+}
+
+
+/* basic margins and paddings */
 p,
 ul,
 ol,
 dl,
 pre,
 table,
-hr,
 blockquote,
-figure,
-details,
 fieldset,
 address {
-  margin: 0 0 1.4em 0; /* bottom margin = line-height */
+  margin: 0 0 .5em 0; /* bottom margin = line-height */
   padding: 0;
 }
-
 div {
   margin: 0;
   padding: 0;
 }
 
-
-/*____________ lists ____________*/
-
+/* lists */
 ul,
 ol {
-  padding: 0 0 0 1.5em;
-}
-[dir=rtl] ul,
-[dir=rtl] ol {
-  padding: 0 1.5em 0 0;
+  padding: 0 0 .5em 0em;
 }
 
 li,
 dd {
   padding: 0;
-  margin: 1px 0 1px 1.5em;
-}
-[dir=rtl] li,
-[dir=rtl] dd {
-  margin: 0 1.5em 0 0;
+  margin: 0 0 .5em 1.5em;
 }
 
 dt {
@@ -138,96 +157,117 @@ dt {
   margin: 0;
   padding: 0;
 }
-
 li ul,
 li ol,
 li dl,
 dl ul,
 dl ol,
 dl dl {
-  margin-bottom: 0;
+  margin-bottom: .5em;
   padding: 0;
 }
 li li {
   font-size: 100%;
 }
+ul             { list-style: square outside; }
+ol             { list-style: decimal outside; }
+ol ol          { list-style-type: lower-alpha; }
+ol ol ol       { list-style-type: upper-roman; }
+ol ol ol ol    { list-style-type: upper-alpha; }
+ol ol ol ol ol { list-style-type: lower-roman; }
 
-ul {
-  list-style: square outside;
-}
-ol {
-  list-style: decimal outside;
-}
-ol ol {
-  list-style-type: lower-alpha;
-}
-ol ol ol {
-  list-style-type: upper-roman;
-}
-ol ol ol ol {
-  list-style-type: upper-alpha;
-}
-ol ol ol ol ol {
-  list-style-type: lower-roman;
-}
-
-/*____________ tables ____________*/
-
+/* tables */
 table {
   border-collapse: collapse;
   empty-cells: show;
   border-spacing: 0;
   border: 1px solid __border__;
+  background-color:white;
 }
-
 caption {
   caption-side: top;
   text-align: left;
+  margin: 0 0 .3em;
 }
-[dir=rtl] caption {
-  text-align: right;
-}
-
 th,
 td {
   padding: .3em .5em;
   margin: 0;
   vertical-align: top;
   border: 1px solid __border__;
+  text-align: left;
 }
 th {
   font-weight: bold;
   background-color: __background_alt__;
-  color: inherit;
-  text-align: left;
-}
-[dir=rtl] th {
-  text-align: right;
 }
 
 
-/*____________ links ____________*/
-
-a:link,
-a:visited {
+/* links */
+div.dokuwiki a:link,
+div.dokuwiki a:visited {
+  color: #436976;
   text-decoration: none;
-  color: __existing__;
-  font-weight: bold;
 }
-a:link:hover,
-a:visited:hover,
-a:link:focus,
-a:visited:focus,
-a:link:active,
-a:visited:active {
-  color: __rollover__;
+div.dokuwiki a:hover,
+div.dokuwiki a:active {
+  color: __text__;
   text-decoration: underline;
 }
-a:link:focus,
-a:visited:focus {
-  outline: 1px dotted;
+
+/* missing page links outside rendered articles */
+a.wikilink2,
+a.wikilink2:link,
+a.wikilink2:visited,
+a.wikilink2:hover {
+  color: __missing__ !important;
+  text-decoration: none;
+}
+a.wikilink2:hover {
+  border-bottom: 0 none !important;
+  text-decoration: none !important;
 }
 
+/* link to current page */
+.dokuwiki span.curid a {
+  font-weight: normal;
+}
+
+/* internal link */
+.dokuwiki a.wikilink1,
+.dokuwiki a.wikilink1:visited {
+  color: __existing__ !important;
+}
+
+/* external links */
+div#bodyContent a.urlextern {
+  background: url(static/3rd/vector/external-link-ltr-icon.png) center right no-repeat;
+  padding: 0 13px 0 0;
+}
+div.dokuwiki a.urlextern:visited {
+  color: purple;
+}
+
+/* email link */
+div#bodyContent a.mail {
+  background: transparent url(static/3rd/vector/mail-icon.png) center right no-repeat;
+  padding: 0 13px 0 0;
+}
+
+/* windows share */
+div.dokuwiki a.windows {
+  background: transparent url(static/3rd/dokuwiki/unc.png) center right no-repeat;
+  padding: 0 18px 1px 0;
+}
+
+/* interwiki link */
+div.dokuwiki a.interwiki {
+  background-position: center left;
+  padding: 0 17px 0 px;
+}
+div.dokuwiki a.interwiki:visited {
+  color: purple;
+}
 
 /*____________ misc ____________*/
 
@@ -259,10 +299,8 @@ button img {
 }
 
 hr {
-  border-style: solid;
-  border-width: 1px 0 0;
+  border: 0 none;
   text-align: center;
-  height: 0;
   width: 100%;
   clear: both;
 }
@@ -307,10 +345,11 @@ pre {
 }
 
 blockquote {
-  padding: 0 .5em;
+  padding: 0 .2em;  /* changed fronm "0 1.25em;" by Lenny 10/14/22  */
   border: solid __border__;
-  border-width: 0 0 0 .25em;
+  border-width: 0 0 0 2px;
 }
+
 [dir=rtl] blockquote {
   border-width: 0 .25em 0 0;
 }
