@@ -109,6 +109,7 @@ echo '            </div> <!-- .tools -->
 
 echo '            <!-- ********** BREADCRUMBS ********** -->
           <div class="breadcrumbs">',"\n";
+/* HAMBURGER MENU COMMENTED OUT
 if($ACT != 'denied'):
   echo '            <!-- ********** MENU ********** -->
               <nav class="mainmenu">
@@ -117,13 +118,13 @@ if($ACT != 'denied'):
         '<img src="',tpl_basedir(),'images/icon-menu.png"  alt="Menu"> ',
         '<span class="vishelp">Menu</span></label>',"\n";
   _tpl_mainmenu();
-  echo '            </nav>',"\n";
+  echo '            </nav>',"\n"; */
   if ($conf['breadcrumbs']):
     tpl_breadcrumbs();
   elseif ($conf['youarehere']):
     tpl_youarehere();
   endif;
-endif;
+/* endif;  */
 echo '</div>',"\n";
 echo '            <div class="clearer"></div>
             <hr class="a11y" />
