@@ -65,7 +65,6 @@ if (function_exists('dwp_display_wiki_page')) dwp_display_wiki_page(":wiki:heade
  */
  
  echo "\n",'        <!-- ********** HEADER ********** -->';
-tpl_includeFile('header.html');
 echo '             <div id="dokuwiki__header" style="font-weight:700; margin:0px; padding:0px;" >
                      <div class="pad">';
 /*
@@ -98,7 +97,7 @@ echo                   '</div> <!-- .tools -->
 echo '                  <hr class="a11y" />
                       </div>
 					</div><!-- /dokuwiki__header -->';
- 
+tpl_includeFile('header.html'); 
 echo '                <!-- ********** CONTENT ********** -->
             <div id="dokuwiki__content">
               <div class="pad">',"\n";
