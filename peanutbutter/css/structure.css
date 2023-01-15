@@ -35,7 +35,7 @@
   float: left;
   position: relative;
   left: -__sidebar_width__;
-  top: -1em;
+  top: -48px;
   display: block;
   padding-top: 0em;  /* changed from 1.1em by Lenny 10/01/22  */
   margin:0;
