@@ -55,84 +55,51 @@ if($showSidebar):
 endif;
 echo '">';
 html_msgarea(); /* occasional error and info messages on top of the page */
-tpl_includeFile('header.html');
-echo "\n",'        <!-- ********** HEADER ********** -->
-        <div id="dokuwiki__header" style="font-weight:700; margin:0px; padding:0px;" >
-          <div class="pad">
-            <div class="headings">',"\n";
-
-/*  THIS SECTION ADDED FOR BACKGROUND BANNER IMAGE 
-		echo '<table style="width:100%; max-width:100%; border:0px; border-style:none; padding:0px; margin:0px;"><tr vertical-align:bottom; height:128px;>';
-		echo '<td style="width:128px; padding:0; margin:0; border-style:none;">';
-/* END OF ADDED SECTION  
 
 
-
-
-/*  THIS SECTION ADDED FOR BACKGROUND BANNER IMAGE  
-		echo '</td>';
-		echo '<td position:relative; object-fit:contain; background-repeat:no-repeat; background="header.jpg" style="padding:0; margin:0; border-style:none; background-position: bottom; background-size:cover;">';
-
-/* END OF ADDED SECTION  */
-
-/*  Search box  */
-if($conf['tagline']):
-  echo '                    <p class="claim">', $conf['tagline'], '</p>',"\n";
-endif;
-echo '                <ul class="a11y skip">
-                    <li><a href="#dokuwiki__content">', $lang['skip_to_content'], '</a></li>
-                </ul>
-                <div class="clearer"></div>
-            </div>
-            <div class="tools" style="position:relative; width:100%; height:30px; margin:0; padding:0">',"\n";
-if($ACT != 'denied'):
-  echo '                <!-- ********** SITE TOOLS ********** -->
-                <div id="dokuwiki__sitetools" style="float:right;">
-                    <h3 class="a11y">', $lang['site_tools'], '</h3>',"\n";
-  tpl_searchform();
-  echo '                </div> <!-- #dokuwiki__sitetools -->',"\n";
-endif;
-
-/*  Page Name  */
-
-echo '                <div style="width:50%;"><h1 style="position:absolute; bottom:0; float:left; font-size:30px; margin-left:12px;" ><a href="/doku.php?id=start" style="color:white; text-shadow:0 0 12 black;" accesskey="h" title="[H]"><!-- INSERT PAGE TITLE HERE--></a></h1>
-
-
-
-</div>',"\n";
-
-/*  THIS SECTION ADDED FOR BACKGROUND BANNER IMAGE  
-		echo '</tr></table>';
-/* END OF ADDED SECTION  */
-echo '            </div> <!-- .tools -->
-            <div class="clearer"></div>',"\n";
-
-echo '            <!-- ********** BREADCRUMBS ********** -->
-          <div class="breadcrumbs">',"\n";
-/* HAMBURGER MENU COMMENTED OUT
-if($ACT != 'denied'):
-  echo '            <!-- ********** MENU ********** -->
-              <nav class="mainmenu">
-              <input type="checkbox" id="hamburger" class="hamburger" />
-              <label for="hamburger" class="hamburger" title="Menu">',
-        '<img src="',tpl_basedir(),'images/icon-menu.png"  alt="Menu"> ',
-        '<span class="vishelp">Menu</span></label>',"\n";
-  _tpl_mainmenu();
-  echo '            </nav>',"\n"; */
-  if ($conf['breadcrumbs']):
-    tpl_breadcrumbs();
-  elseif ($conf['youarehere']):
-    tpl_youarehere();
-  endif;
-/* endif;  */
-echo '</div>',"\n";
-echo '            <div class="clearer"></div>
-            <hr class="a11y" />
-        </div></div><!-- /header -->
-
-        <div class="wrapper">',"\n";
+/*  Wrapper   */
+echo '                <div class="wrapper">',"\n";
 if (function_exists('dwp_display_wiki_page')) dwp_display_wiki_page(":wiki:headertext"); 
-echo '            <!-- ********** CONTENT ********** -->
+/*
+ *   Content
+ */
+ 
+ echo "\n",'        <!-- ********** HEADER ********** -->';
+tpl_includeFile('header.html');
+echo '             <div id="dokuwiki__header" style="font-weight:700; margin:0px; padding:0px;" >
+                     <div class="pad">';
+/*
+ *   HEADER BAR 
+ */
+echo '                  <div class="tools" style="position:relative; 
+                          width:100%; height:30px; margin:0; padding:0; text-align:left;">',"\n";
+echo                     '<!-- ********** BREADCRUMBS ********** -->
+                          <div class="breadcrumbs">',"\n";
+if ($conf['breadcrumbs']):
+	tpl_breadcrumbs();
+elseif ($conf['youarehere']):
+	tpl_youarehere();
+endif;
+echo                   '</div>'/*,"\n"*/;  /* enc breadcrumbs div  */
+if($ACT != 'denied'):
+  echo '                  <!-- ********** SITE TOOLS (search) ******* -->
+                          <div id="dokuwiki__sitetools" style="float:right;">';
+/* commented out  
+                            <h3 class="a11y">', $lang['site_tools'], '</h3>',"\n";  */ 
+  tpl_searchform();
+  echo '                  </div> <!-- #dokuwiki__sitetools -->',"\n";
+endif;
+
+/*  Page Name section removed */
+
+
+echo                   '</div> <!-- .tools -->
+                        <div class="clearer"></div>',"\n";		  
+echo '                  <hr class="a11y" />
+                      </div>
+					</div><!-- /dokuwiki__header -->';
+ 
+echo '                <!-- ********** CONTENT ********** -->
             <div id="dokuwiki__content">
               <div class="pad">',"\n";
 tpl_flush(); /* flush the output buffer */

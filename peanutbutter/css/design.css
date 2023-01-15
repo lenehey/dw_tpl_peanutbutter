@@ -112,6 +112,12 @@
   text-decoration: none;
 }
 
+#dokuwiki__sitetools {
+	float:right;
+	position:relative;
+	bottom:24px;
+}
+
 /* sidebar
 ********************************************************************/
 
