@@ -12,6 +12,8 @@
     padding-right: 35px;
     /* give the same space to the left to balance it out */
     padding-left: 10px;
+	/* align top of header to top of page  */
+	margin-top:-3px;
 }
 .dokuwiki div.page {
     height: 12px;
@@ -58,7 +60,7 @@
 	display: block;
 	white-space: nowrap;
 	width: 30px;
-	height: 0px;
+	height: 28px;
 	overflow: hidden;
   padding: 3px 0 0 0;
 }
