@@ -11,7 +11,7 @@
 /* header
 ********************************************************************/
 #dokuwiki__header {
-  margin: 1em 0 0;
+  margin: 0;
 }
 
 #dokuwiki__header .headings {
@@ -59,11 +59,13 @@
 #dokuwiki__header form.search {
   display: block;
   position: relative;
-  margin-bottom: 0.5em;
+  margin: 0px;
+  margin-right:3.5px;
+  margin-top:-2.5px;
 }
 #dokuwiki__header form.search input#qsearch__in {
-  width: 12em;
-  padding: .35em 22px .35em .1em;
+  width: 280px;
+  padding: 4px;
 }
 #dokuwiki__header form.search div#qsearch__out {
   display: none;
@@ -90,9 +92,11 @@
 
 #dokuwiki__header div.breadcrumbs {
   background-color: __background_neu__;
-  padding: 0.2rem 0 0 1rem;
+  padding-top: 5px;
+  padding-left:5px;
+  margin-right:-2px;
   color: __text_neu__;
-  min-height: 1.5rem;
+  min-height: 24px;
 }
 #dokuwiki__header div.breadcrumbs a {
   text-decoration: none;
@@ -113,7 +117,7 @@
 }
 
 #dokuwiki__sitetools {
-	float:right;
+	/*float:right;*/
 	position:relative;
 	bottom:24px;
 }
