@@ -9,7 +9,7 @@
 
 #dokuwiki__site > .site {
     /* give space to the right so the tools won't disappear on smaller screens */
-    padding-right: 50px;
+    padding-right: 35px;
     /* give the same space to the left to balance it out */
     padding-left: 10px;
 }
@@ -58,7 +58,7 @@
 	display: block;
 	white-space: nowrap;
 	width: 30px;
-	height: 30px;
+	height: 0px;
 	overflow: hidden;
   padding: 3px 0 0 0;
 }
